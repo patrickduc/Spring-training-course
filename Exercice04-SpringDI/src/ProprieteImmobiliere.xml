@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="batimentPierreBean" class="exercices.BatimentPierre">
+		<constructor-arg type="int" value="400" />
+		<constructor-arg type="int" value="15" />
+	</bean>
+
+	<bean id="batimentBriqueBean" class="exercices.BatimentBrique">
+		<constructor-arg type="int" value="600" />
+		<constructor-arg type="int" value="18" />
+	</bean>
+
+	<bean id="terrainGazonBean" class="exercices.TerrainGazon">
+		<constructor-arg type="int" value="2000" />
+	</bean>
+
+	<bean id="terrainBetonBean" class="exercices.TerrainBeton">
+		<constructor-arg type="int" value="2000" />
+	</bean>
+
+    <bean id="proprieteImmobiliere1Bean" class="exercices.ProprieteImmobiliere">
+    	<constructor-arg type="String" value="31, rue des Cosmonautes - 31 Toulouse" />
+    	<property name="batiment" ref="batimentPierreBean" />
+    	<property name="terrain" ref="terrainGazonBean" />
+    </bean>
+
+    <bean id="proprieteImmobiliere2Bean" class="exercices.ProprieteImmobiliere">
+    	<constructor-arg type="String" value="165, avenue Hoche - 75 Paris" />
+    	<property name="batiment" ref="batimentBriqueBean" />
+    	<property name="terrain" ref="terrainBetonBean" />
+    </bean>
+
+</beans>

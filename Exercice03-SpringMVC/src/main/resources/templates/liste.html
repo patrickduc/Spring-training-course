@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste des livres dans la bibliotheque</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<p>Liste des livres<p/>
+	<table>
+    	<tr data-th-each="livre : ${livres}">
+        	<td data-th-text="${livre.isbn}">isbn</td>
+        	<td data-th-text="${livre.auteur}">auteur</td>
+        	<td data-th-text="${livre.titre}">titre</td>
+        	<td data-th-text="${livre.anneeDEdition}">annee</td>
+    	</tr>
+	</table>
+</body>
+</html>

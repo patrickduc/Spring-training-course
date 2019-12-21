@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<context:annotation-config />
+
+	<bean class="exercices.Livre">
+		<constructor-arg name="titre" value="Le monstre" />
+		<constructor-arg name="auteur" value="Richard Matheson" />
+		<constructor-arg name="categorie" value="Science-fiction" />
+		<constructor-arg name="isbn" value="123-456-788" />
+		<qualifier value="science-fiction" />
+	</bean>
+
+	<bean class="exercices.Livre">
+		<constructor-arg name="titre" value="Le crime de l'Orient Express" />
+		<constructor-arg index="1" value="Agatha Christie" />
+		<constructor-arg index="2" value="Polar" />
+		<constructor-arg index="3" value="123-789-789" />
+		<qualifier value="polar" />
+	</bean>
+
+	<bean class="exercices.Livre">
+		<constructor-arg index="0" value="Le monde de Sophie" />
+		<constructor-arg index="1" value="Jostein Gaarder" />
+		<constructor-arg index="2" value="Philosophie" />
+		<constructor-arg index="3" value="123-456-787" />
+		<qualifier value="philosophie" />
+	</bean>
+
+	<bean class="exercices.Livre">
+		<constructor-arg index="0" value="Fahrenheit 451" />
+		<constructor-arg index="1" value="Ray Bradbury" />
+		<constructor-arg index="2" value="Science-fiction" />
+		<constructor-arg index="3" value="123-456-789" />
+		<qualifier value="science-fiction" />
+	</bean>
+
+	<bean class="exercices.Livre">
+		<constructor-arg index="0" value="La planete des singes" />
+		<constructor-arg index="1" value="Pierre Boulle" />
+		<constructor-arg index="2" value="Science-fiction" />
+		<constructor-arg index="3" value="123-123-789" />
+		<qualifier value="science-fiction" />
+	</bean>
+
+	<bean class="exercices.Livre">
+		<constructor-arg index="0" value="Le monde du non-A" />
+		<constructor-arg index="1" value="Alfred Elton Van Vogt" />
+		<constructor-arg index="2" value="Science-fiction" />
+		<constructor-arg index="3" value="123-456-790" />
+		<qualifier value="science-fiction" />
+	</bean>
+
+	<!-- 
+	<bean class="exercices.Livre">
+		<constructor-arg index="0" value="Une brève histoire de l'humanité" />
+		<constructor-arg index="1" value="Yuval Noah Harari" />
+		<constructor-arg index="2" value="Histoire" />
+		<constructor-arg index="3" value="123-123-123" />
+		<qualifier value="histoire" />
+	</bean>
+ -->
+	<bean class="exercices.Livre">
+		<constructor-arg index="0" value="Mort sur le Nil" />
+		<constructor-arg index="1" value="Agatha Christie" />
+		<constructor-arg index="2" value="Polar" />
+		<constructor-arg index="3" value="123-456-791" />
+		<qualifier value="polar" />
+	</bean>
+
+	<bean class="exercices.Livre">
+		<constructor-arg index="0" value="Millenium" />
+		<constructor-arg index="1" value="Stieg Larsson" />
+		<constructor-arg index="2" value="Polar" />
+		<constructor-arg index="3" value="123-456-793" />
+		<qualifier value="polar" />
+	</bean>
+
+	<bean class="exercices.Bibliotheque" />
+ 
+</beans>

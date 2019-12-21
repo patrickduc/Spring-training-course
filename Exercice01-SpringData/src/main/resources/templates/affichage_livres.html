@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Recherche d'un livre</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+	<p th:text="'Caractéristiques des livres recherchés :'"/>
+	<p th:if="${isbn != null}" th:text="'ISBN : ' + ${isbn} + '.'" />
+	<p th:if="${auteur != null}" th:text="'Auteur : ' + ${auteur} + '.'" />
+	<p th:if="${titre != null}" th:text="'Titre : ' + ${titre} + '.'" />
+	<p th:if="${annee != null}" th:text="'Année : ' + ${annee} + '.'" />
+
+	<p th:text="${nombre_de_livres} + ' livres trouvés :'"/>
+	<table>
+    	<tr data-th-each="livre : ${livres}">
+        	<td data-th-text="${livre.isbn}">isbn</td>
+        	<td data-th-text="${livre.auteur}">auteur</td>
+        	<td data-th-text="${livre.titre}">titre</td>
+        	<td data-th-text="${livre.annee}">annee</td>
+    	</tr>
+	</table>
+</body>
+</html>

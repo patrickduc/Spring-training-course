@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>ERREUR</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<body>
+    <p th:text="'Une erreur a été détectée dans la bibliothèque.'" />
+	<p th:if="${codeHttp != null}" th:text="'Code de retour HTTP : ' + ${codeHttp} + '.'" />
+	<p th:if="${texteException != null}" th:text="'Exception : ' + ${texteException} + '.'" />
+	<p th:if="${messageDErreur != null}" th:text="'Message : ' + ${messageDErreur}" />
+</body>
+</html>

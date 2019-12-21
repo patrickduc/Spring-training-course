@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="batimentBean" class="exercices.Batiment">
+		<constructor-arg type="int" value="300" />
+		<constructor-arg type="int" value="12" />
+	</bean>
+
+	<bean id="terrainBean" class="exercices.Terrain">
+		<constructor-arg type="int" value="1500" />
+	</bean>
+
+    <bean id="proprieteImmobiliereBean" class="exercices.ProprieteImmobiliere">
+    	<constructor-arg type="String" value="13, avenue des Champs Elysees - 75 Paris" />
+    	<property name="batiment" ref="batimentBean" />
+    	<property name="terrain" ref="terrainBean" />
+    </bean>
+
+</beans>

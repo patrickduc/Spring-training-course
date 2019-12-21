@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="batimentBean" class="exercices.PromoteurImmobilier" factory-method="creeBatiment">
+		<constructor-arg type="int" value="400" />
+		<constructor-arg type="int" value="15" />
+	</bean>
+
+	<bean id="terrainBean" class="exercices.PromoteurImmobilier" factory-method="creeTerrain">
+		<constructor-arg type="int" value="2000" />
+	</bean>
+
+    <bean id="proprieteImmobiliereBean" class="exercices.PromoteurImmobilier" factory-method="creeProprieteImmobiliere">
+    	<constructor-arg type="String" value="7, avenue de la Paix - 75 Paris" />
+    	<property name="batiment" ref="batimentBean" />
+    	<property name="terrain" ref="terrainBean" />
+    </bean>
+
+</beans>
