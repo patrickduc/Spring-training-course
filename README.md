@@ -13,4 +13,8 @@ The Spring topics covered are :
 The corresponding slides should be read in this order, starting with "Spring - Introduction" of course.
 The slides in file "Examples - description.pdf" describe the various examples. They highlight what is of interest in each example.
 
+Files are organized this way.
+The directory training contains all but exercise slides. Exercice slides are placed in "Exercises/slides" subdirectory.
+Solutions to exercices can be found in directory "exercices/sources", while the exercise slides are located in "exercices/slides".
+
 Hope this helps !
