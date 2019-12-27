@@ -9,7 +9,7 @@ The Spring topics covered are :
     2) Spring MVC
     3) Spring Data (with focus on JPA repositories)
     4) Spring Resources
-    5) SPring AOP (only very basic information)
+    5) Spring AOP (only very basic information)
     6) Spring REST (very partially, as it lacks a proper introduction to REST).
 The corresponding slides should be read in this order, starting with "Spring - Introduction" of course.
 
