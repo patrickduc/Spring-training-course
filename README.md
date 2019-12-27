@@ -5,12 +5,12 @@ It must be pointed out that these solutions are naive ones. The intent of an exe
 Some exercises need an RDBMS to work.
 
 The Spring topics covered are :
-    * Spring Dependency Injection
-    * Spring MVC
-    * Spring Data (with focus on JPA repositories)
-    * Spring Resources
-    * SPring AOP (only basic information)
-    * Spring REST (very partially, as it lacks a proper introduction to REST).
+    1) Spring Dependency Injection
+    2) Spring MVC
+    3) Spring Data (with focus on JPA repositories)
+    4) Spring Resources
+    5) SPring AOP (only very basic information)
+    6) Spring REST (very partially, as it lacks a proper introduction to REST).
 The corresponding slides should be read in this order, starting with "Spring - Introduction" of course.
 
 Files are organized this way.
