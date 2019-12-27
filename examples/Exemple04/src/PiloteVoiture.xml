@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="moteur" class="exemples.spring.formation.Moteur">
+		<constructor-arg type="java.lang.String" value="Toyota" />
+		<constructor-arg type="int" value="1234567890" />
+	</bean>
+
+	<bean id="simumoteur" class="exemples.spring.formation.SimuMoteur">
+		<constructor-arg type="java.lang.String" value="Mercedes" />
+		<constructor-arg type="int" value="2468" />
+	</bean>
+
+	<bean id="chassis" class="exemples.spring.formation.Chassis">
+		<constructor-arg type="int" value="2" />
+		<constructor-arg type="int" value="4" />
+	</bean>
+
+    <bean id="piloteVoitureBean" class="exemples.spring.formation.PiloteVoiture">
+    	<constructor-arg ref="simumoteur" />
+    	<constructor-arg ref="chassis" />
+    </bean>
+
+</beans>

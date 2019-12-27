@@ -1,0 +1,2 @@
+manufacturer=Toyota
+power=240 BHP

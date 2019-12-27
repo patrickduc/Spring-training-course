@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="moteur" class="exercices.spring.formation.FabriqueVoiture" factory-method="creeMoteur">
+		<constructor-arg type="int" value="13579" />
+		<constructor-arg type="java.lang.String" value="Lamborghini" />
+	</bean>
+
+	<bean id="chassis" class="exercices.spring.formation.Chassis">
+		<constructor-arg type="int" value="1" />
+		<constructor-arg type="int" value="3" />
+	</bean>
+
+    <bean id="piloteVoitureBean" class="exercices.spring.formation.PiloteVoiture">
+    	<constructor-arg ref="moteur" />
+    	<constructor-arg ref="chassis" />
+    </bean>
+
+</beans>
